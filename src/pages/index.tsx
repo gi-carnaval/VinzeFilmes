@@ -5,6 +5,7 @@ import { JobsSection, VideoProps } from '@/components/JobsSections'
 import { ProposeSection } from '@/components/ProproseSection'
 import { createClient } from '@/services/prismicio'
 import { GetServerSidePropsContext } from 'next'
+import Head from 'next/head'
 
 interface HomeProps {
   logos: LogoImages[]
@@ -14,6 +15,9 @@ interface HomeProps {
 export default function Home({ logos, videos }: HomeProps) {
   return (
     <>
+      <Head>
+        <title>Vinze Filmes</title>
+      </Head>
       <FirstSection />
       <ProposeSection />
       <AboutSection />

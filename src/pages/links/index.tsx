@@ -6,10 +6,14 @@ import buttonVinzeFilmes from '../../assets/buttonVinzeFilmes.png'
 
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 
 export default function links() {
   return (
     <div className="h-screen mx-5 mb-36 flex justify-center items-center lg:w-full lg:mx-0 md:bg-[url('../assets/bg.png')] bg-none bg-no-repeat bg-cover">
+      <Head>
+        <title>Vinze Filmes Links</title>
+      </Head>
       <div className="flex flex-col-reverse items-start mt-24 px-5 justify-between lg:gap-16 lg:mb-1 lg:mx-[100px] md:flex-row">
         <section className="flex flex-col justify-center items-center lg:items-start lg:max-w-lg">
           <div className="flex flex-col-reverse justify-center items-center lg:block mt-24 lg:mt-0">

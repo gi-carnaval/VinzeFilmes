@@ -15,14 +15,12 @@ interface JobsProps {
 }
 
 export function JobsSection({ jobVideos }: JobsProps) {
-  console.log('Videos: ', jobVideos)
   return (
     <div className="mt-36 mb-36 w-full flex flex-col justify-center items-center">
       <Title title={'Nossos Trabalhos'} />
       <div className="w-full mt-12 px-[10%] flex flex-row flex-wrap justify-around items-center gap-10">
         {jobVideos &&
           jobVideos.map((video, index) => {
-            // console.log("Video", video.data.link_do_video.url)
             return (
               <div
                 key={index}
