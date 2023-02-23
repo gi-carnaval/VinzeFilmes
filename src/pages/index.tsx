@@ -4,7 +4,7 @@ import { FirstSection } from '@/components/FirstSection'
 import { JobsSection, VideoProps } from '@/components/JobsSections'
 import { ProposeSection } from '@/components/ProproseSection'
 import { createClient } from '@/services/prismicio'
-import { GetStaticPropsContext } from 'next'
+import { GetServerSidePropsContext } from 'next'
 
 interface HomeProps {
   logos: LogoImages[]
@@ -22,7 +22,16 @@ export default function Home({ logos, videos }: HomeProps) {
     </>
   )
 }
-export async function getStaticProps({ previewData }: GetStaticPropsContext) {
+export async function getServerSideProps({
+  previewData,
+  req,
+  res,
+}: GetServerSidePropsContext) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59',
+  )
+
   const client = createClient({ previewData })
 
   const logos = await client.getAllByType('logo_clientes')
