@@ -18,7 +18,14 @@ export function Footer() {
       <span className="w-full mx-[100px] my-7 h-[2px] bg-[#696969]" />
       <div className="w-full px-[5vw] flex flex-col-reverse items-center justify-between lg:flex-row">
         <span className="flex justify-center lg:w-96 lg:justify-start">
-          Desenvolvido por&nbsp;<a className="font-bold"> Giovani Carnaval</a>
+          Desenvolvido por&nbsp;
+          <Link
+            href="https://linkedin.com/in/giovani-carnaval/"
+            className="font-bold"
+          >
+            {' '}
+            Giovani Carnaval
+          </Link>
         </span>
         <span className="flex flex-col items-center mb-7 lg:w-96 lg:mb-0">
           <p>Vinze Filmes - CNPJ xx.xxx.xx/xxx-xx</p>
