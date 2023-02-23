@@ -12,7 +12,7 @@ export function Footer() {
   const currentYear = currentDate.getFullYear()
 
   return (
-    <div className="w-full mb-10 flex flex-col justify-center items-center mt-10 lg:mt-64">
+    <div className="w-full flex flex-col justify-center items-center mt-10 lg:mt-64">
       <Image height={40} src={LogoVinze} alt="" />
       <span className="w-full mx-[100px] my-7 h-[2px] bg-[#696969]" />
       <div className="w-full px-[5vw] flex flex-col-reverse items-center justify-between lg:flex-row">
