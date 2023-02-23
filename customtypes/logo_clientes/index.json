@@ -1,0 +1,25 @@
+{
+  "id": "logo_clientes",
+  "label": "Logo Clientes",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "nome_do_cliente": {
+        "type": "Text",
+        "config": {
+          "label": "Nome do Cliente",
+          "placeholder": ""
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

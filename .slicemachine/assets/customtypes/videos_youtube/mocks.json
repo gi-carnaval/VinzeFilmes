@@ -1,0 +1,14 @@
+{
+  "titulo_do_trabalho": {
+    "__TYPE__": "FieldContent",
+    "value": "hill",
+    "type": "Text"
+  },
+  "link_do_video": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "https://slicemachine.dev"
+    }
+  }
+}
