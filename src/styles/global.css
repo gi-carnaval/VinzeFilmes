@@ -48,6 +48,18 @@ content: '' !important;
   opacity: 1;
 }
 
+.logoVinze {
+  animation: logoVinzeAnimation 1s ease-in-out infinite alternate;
+}
+@keyframes logoVinzeAnimation {
+  0% {
+    transform: translate(0, -10px)
+  }
+  100% {
+    transform: translate(0, 10px)
+  }
+}
+
 .animate-svg svg {
 stroke-width: 20px;
 fill: #101010;

@@ -22,12 +22,16 @@ export function FirstSection() {
           <Button
             className="mt-6 lg:mt-24"
             textButton="Entre em contato"
-            link="https://wa.me/5514997623484?text=Gostaria%20de%20um%20or%C3%A7amento,%20por%20favor!"
+            link="https://api.whatsapp.com/send?phone=5514997623484&text=Ol%C3%A1%20Vinze%2C%20queria%20iniciar%20um%20projeto%20com%20voc%C3%AA%20%F0%9F%98%8E"
             hasIcon
           />
         </section>
         <section className="flex justify-center items-start md:justify-end">
-          <Image src={LogoVinze} alt="Logo Vinze Filmes" className="w-3/4" />
+          <Image
+            src={LogoVinze}
+            alt="Logo Vinze Filmes"
+            className="w-3/4 logoVinze"
+          />
         </section>
       </div>
     </div>
