@@ -16,7 +16,7 @@ export function AboutSection() {
         </section>
         <section className="max-w-xl text-base leading-5 lg:leading-8 lg:text-lg">
           <p className="text-center mt-4">
-            A VinzeFilmes é uma empresa referência no mercado audiovisual de
+            A Vinze Filmes é uma empresa referência no mercado audiovisual de
             Ourinhos e região. Desde 2016, nós estamos dando VIDA a IDEIA de
             nossos clientes. Nossa missão é transformar ideias em um produto
             audiovisual de alta qualidade.

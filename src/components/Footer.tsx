@@ -17,13 +17,12 @@ export function Footer() {
       <Image height={40} src={LogoVinze} alt="" />
       <span className="w-full mx-[100px] my-7 h-[2px] bg-[#696969]" />
       <div className="w-full px-[5vw] flex flex-col-reverse items-center justify-between lg:flex-row">
-        <span className="flex justify-center lg:w-96 lg:justify-start">
+        <span className="text-sm flex justify-center lg:w-96 lg:justify-start">
           Desenvolvido por&nbsp;
           <Link
             href="https://linkedin.com/in/giovani-carnaval/"
             className="font-bold"
           >
-            {' '}
             Giovani Carnaval
           </Link>
         </span>

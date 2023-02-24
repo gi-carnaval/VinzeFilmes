@@ -2,10 +2,12 @@ import { AboutSection } from '@/components/AboutSection'
 import { ClientsSection, LogoImages } from '@/components/ClientsSection'
 import { FirstSection } from '@/components/FirstSection'
 import { JobsSection, VideoProps } from '@/components/JobsSections'
+import { Loading } from '@/components/Loading'
 import { ProposeSection } from '@/components/ProproseSection'
 import { createClient } from '@/services/prismicio'
 import { GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 
 interface HomeProps {
   logos: LogoImages[]
@@ -13,16 +15,29 @@ interface HomeProps {
 }
 
 export default function Home({ logos, videos }: HomeProps) {
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect(() => {
+    // Wait for 3 seconds
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000)
+  }, [])
   return (
     <>
       <Head>
         <title>Vinze Filmes</title>
       </Head>
-      <FirstSection />
-      <ProposeSection />
-      <AboutSection />
-      <ClientsSection logoImages={logos} />
-      <JobsSection jobVideos={videos} />
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <FirstSection />
+          <ProposeSection />
+          <AboutSection />
+          <ClientsSection logoImages={logos} />
+          <JobsSection jobVideos={videos} />
+        </>
+      )}
     </>
   )
 }
