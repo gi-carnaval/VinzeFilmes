@@ -30,13 +30,9 @@ export function JobsSection({ jobVideos }: JobsProps) {
                 <h3 className="justify-center items-center mb-6 text-xl font-bold">
                   {video.data.titulo_do_trabalho}
                 </h3>
-                <div className="lg:w-[500px] lg:h-[280px] overflow-hidden video-wrapper">
-                  <YoutubeEmbed videoUrl={`${video.data.link_do_video.url}`} />
+                <div className="w-[80vw] lg:w-[500px] lg:h-[280px] overflow-hidden video-wrapper">
+                  <YoutubeEmbed videoInfos={video.data} />
                 </div>
-
-                {/* <iframe
-                  src={`${video.data.link_do_video.url}?autoplay=1`}
-                ></iframe> */}
               </div>
             )
           })}

@@ -34,20 +34,24 @@ function useLazyLoad(
 }
 
 interface Props {
-  videoUrl: string
+  videoInfos: {
+    link_do_video: {
+      url: string
+    }
+    titulo_do_trabalho: string
+  }
 }
 
-export const YoutubeEmbed = ({ videoUrl }: Props) => {
-  const splitedUrlVideo = videoUrl.split('/')
+export const YoutubeEmbed = ({ videoInfos }: Props) => {
+  const splitedUrlVideo = videoInfos.link_do_video.url.split('/')
   const idVideo = splitedUrlVideo[4]
-  console.log('Video id: ', idVideo)
-  // const [loaded, setLoaded] = useState(false)
   const iframeRef = useRef<HTMLIFrameElement | null>(null)
   useLazyLoad(iframeRef)
 
   return (
     <div className="video-wrapper">
       <iframe
+        title={videoInfos.titulo_do_trabalho}
         ref={iframeRef}
         className="lazy-load"
         data-src={`https://www.youtube.com/embed/${idVideo}`}
