@@ -30,9 +30,9 @@ export default function Links() {
               <title>Vinze Filmes Links</title>
             </Head>
             <div className="flex flex-col-reverse items-start mt-24 px-5 justify-between lg:gap-16 lg:mb-1 lg:mx-[100px] md:flex-row">
-              <section className="flex flex-col justify-center items-center lg:items-start lg:max-w-lg">
+              <section className="flex flex-col justify-center items-center lg:items-start lg:max-w-xl">
                 <div className="flex flex-col-reverse justify-center items-center lg:block mt-24 lg:mt-0">
-                  <h1 className="text-3xl text-center mt-6 lg:text-left lg:text-[54px] lg:leading-[64px]">
+                  <h1 className="text-3xl text-center mt-6 lg:text-left lg:text-[64px] lg:leading-[64px]">
                     Conheça a <span className="font-bold">Vinze</span>, e
                     revolucione seus projetos
                   </h1>

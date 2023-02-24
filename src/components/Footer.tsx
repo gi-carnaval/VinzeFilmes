@@ -27,7 +27,7 @@ export function Footer() {
           </Link>
         </span>
         <span className="flex flex-col items-center mb-7 lg:w-96 lg:mb-0">
-          <p>Vinze Filmes - CNPJ xx.xxx.xx/xxx-xx</p>
+          <p>Vinze Filmes - CNPJ 45.660.472/0001-09</p>
           <p>Copyright {currentYear}</p>
         </span>
         <span className="flex justify-center items-center gap-5 mb-7 lg:w-96 lg:justify-end lg:mb-0">
