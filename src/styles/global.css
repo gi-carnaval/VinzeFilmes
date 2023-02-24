@@ -71,7 +71,7 @@ stroke: white;
 stroke-dashoffset: 4800;
 stroke-dasharray: 4800;
 
-animation: svgStrokeAnimation 3s ease-in-out forwards infinite, svgSizeAnimation 3s ease infinite;
+animation: svgStrokeAnimation 2s ease-in-out forwards infinite, svgSizeAnimation 2s ease infinite;
 }
 
 @keyframes svgStrokeAnimation {

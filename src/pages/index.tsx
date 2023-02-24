@@ -20,7 +20,7 @@ export default function Home({ logos, videos }: HomeProps) {
     // Wait for 3 seconds
     setTimeout(() => {
       setIsLoading(false)
-    }, 2000)
+    }, 1500)
   }, [])
   return (
     <>
