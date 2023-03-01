@@ -16,7 +16,7 @@ module.exports = {
         7: 'repeat(7, minmax(0, 1fr))',
       },
       fontFamily: {
-        sans: ['manrope', 'sans-serif'],
+        sans: ['montserrat', 'sans-serif'],
       },
       backgroundImage: {
         principalBG: "url('/ser/assets/bg.png)",

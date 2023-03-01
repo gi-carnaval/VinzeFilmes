@@ -26,6 +26,10 @@ export default function Home({ logos, videos }: HomeProps) {
     <>
       <Head>
         <title>Vinze Filmes</title>
+        <meta
+          property="og:image"
+          content="https://images.prismic.io/vinzefilmes/6c3d4335-02a4-4e7f-987d-6e586f93c6eb_v_white.png?auto=compress,format"
+        />
       </Head>
       {isLoading ? (
         <Loading />

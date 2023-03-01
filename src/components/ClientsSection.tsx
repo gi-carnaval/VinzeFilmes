@@ -8,8 +8,21 @@ import { CaretLeft, CaretRight } from 'phosphor-react'
 import Image from 'next/image'
 import { HTMLProps } from 'react'
 
+export interface LogoImages {
+  data: {
+    logo: {
+      url: string
+    }
+  }
+}
+
+interface ClientsProps {
+  logoImages: LogoImages[]
+}
+
 function SampleNextArrow(props: HTMLProps<HTMLDivElement>) {
   const { onClick } = props
+
   return (
     <div
       className="slick-next"
@@ -41,14 +54,17 @@ function SamplePrevArrow(props: HTMLProps<HTMLDivElement>) {
 }
 
 const settings = {
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 1000,
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
+  className: 'slider',
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
+  centerMode: true,
+  centerPadding: '0px',
   responsive: [
     {
       breakpoint: 1024,
@@ -75,18 +91,6 @@ const settings = {
       },
     },
   ],
-}
-
-export interface LogoImages {
-  data: {
-    logo: {
-      url: string
-    }
-  }
-}
-
-interface ClientsProps {
-  logoImages: LogoImages[]
 }
 
 export function ClientsSection({ logoImages }: ClientsProps) {

@@ -4,6 +4,47 @@
 /* purgecss end ignore */
 @tailwind  utilities;
 
+/* .slick-dots {
+  position: absolute !important;
+  left: 50% !important;
+  display: inline-flex !important;
+  margin: 0 !important;
+  padding:25px 0 0 0 !important;
+  bottom: -50px;
+  list-style-type: none !important;
+  max-width: 150px !important;
+  overflow: hidden !important;
+} */
+
+.slick-dots li {
+  width: 12px !important;
+  margin: 0 3px !important;
+}
+
+.slick-dots button {
+  display: block !important;
+  width: 6px !important;
+  height: 6px !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  border: none !important;
+  border-radius: 100% !important;
+  background-color: grey !important;
+  text-indent: -9999px !important;
+}
+.slick-dots li.slick-active button {
+  background-color: blue !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin-top:-4px !important;
+}
+
+.slick-dots li.slick-secondary button {
+  width: 8px !important;
+  height: 8px !important;
+  margin-top: -1px !important;
+}
+
 .slick-dots li button:before {
   color: #DEDEDE !important;
 }
@@ -46,6 +87,18 @@ content: '' !important;
 
 .lazy-load.is-loaded {
   opacity: 1;
+}
+
+.card-animation {
+  animation: cardsAnimation 500ms ease-in-out infinite alternate;
+}
+@keyframes cardsAnimation {
+  0% {
+    transform: scale(0.99)
+  }
+  100% {
+    transform: scale(1.00)
+  }
 }
 
 .logoVinze {
