@@ -4,6 +4,57 @@
 /* purgecss end ignore */
 @tailwind  utilities;
 
+.show-card {
+   position: relative;
+   top: -5em;
+   opacity: 0;
+   z-index: 0;
+   -webkit-animation: slide-in 1s forwards;
+   animation: slide-top-in 1s forwards;
+}
+@-webkit-keyframes slide-top-in {
+  0% { opacity: 0; }
+  100% { top: 0; opacity: 1; }
+}
+@keyframes slide-top-in {
+  00% {opacity: 0; }
+  100% { top: 0; opacity: 1; }
+}
+
+.show-aboutImage {
+  position: relative;
+  left: -5em;
+  opacity: 0;
+  z-index: 0;
+  -webkit-animation: slide-left-in 1s forwards;
+  animation: slide-left-in 1s forwards;
+}
+@-webkit-keyframes slide-left-in {
+ 0% { opacity: 0; }
+ 100% { left: 0; opacity: 1; }
+}
+@keyframes slide-left-in {
+ 00% {opacity: 0; }
+ 100% { left: 0; opacity: 1; }
+}
+
+.show-aboutText {
+  position: relative;
+  right: -5em;
+  opacity: 0;
+  z-index: 0;
+  -webkit-animation: slide-right-in 1s forwards;
+  animation: slide-right-in 1s forwards;
+}
+@-webkit-keyframes slide-right-in {
+ 0% { opacity: 0; }
+ 100% { right: 0; opacity: 1; }
+}
+@keyframes slide-right-in {
+ 00% {opacity: 0; }
+ 100% { right: 0; opacity: 1; }
+}
+
 /* .slick-dots {
   position: absolute !important;
   left: 50% !important;

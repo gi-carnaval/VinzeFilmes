@@ -15,12 +15,37 @@ interface HomeProps {
 }
 
 export default function Home({ logos, videos }: HomeProps) {
+  const [classNameAboutImage, setClassNameAboutImage] = useState('hidden')
+  const [classNameAboutText, setClassNameAboutText] = useState('hidden')
+  const [classNameCardGroup, setClassNameCardGroup] = useState('hidden')
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
-    // Wait for 3 seconds
     setTimeout(() => {
       setIsLoading(false)
     }, 1500)
+
+    function handleScroll() {
+      if (window.innerWidth > 426) {
+        if (document.documentElement.scrollTop > 450) {
+          setClassNameCardGroup('show-card')
+        }
+        if (document.documentElement.scrollTop > 1050) {
+          setClassNameAboutImage('show-aboutImage')
+          setClassNameAboutText('show-aboutText')
+        }
+      }
+      if (window.innerWidth <= 426) {
+        if (document.documentElement.scrollTop > 299) {
+          setClassNameCardGroup('show-card')
+        }
+        if (document.documentElement.scrollTop > 1799) {
+          setClassNameAboutImage('show-aboutImage')
+          setClassNameAboutText('show-aboutText')
+        }
+      }
+    }
+
+    window.onscroll = () => handleScroll()
   }, [])
   return (
     <>
@@ -37,8 +62,11 @@ export default function Home({ logos, videos }: HomeProps) {
       ) : (
         <>
           <FirstSection />
-          <ProposeSection />
-          <AboutSection />
+          <ProposeSection classNameCardGroup={classNameCardGroup} />
+          <AboutSection
+            classNameAboutImage={classNameAboutImage}
+            classNameAboutText={classNameAboutText}
+          />
           <ClientsSection logoImages={logos} />
           <JobsSection jobVideos={videos} />
         </>
@@ -48,7 +76,6 @@ export default function Home({ logos, videos }: HomeProps) {
 }
 export async function getServerSideProps({
   previewData,
-  req,
   res,
 }: GetServerSidePropsContext) {
   res.setHeader(
@@ -57,13 +84,18 @@ export async function getServerSideProps({
   )
 
   const client = createClient({ previewData })
-
-  const logos = await client.getAllByType('logo_clientes')
-  const videos = await client.getAllByType('videos_youtube')
-  return {
-    props: {
-      logos,
-      videos,
-    },
+  try {
+    const logos = await client.getAllByType('logo_clientes')
+    const videos = await client.getAllByType('videos_youtube')
+    return {
+      props: {
+        logos,
+        videos,
+      },
+    }
+  } catch (err) {
+    return {
+      notFound: true,
+    }
   }
 }

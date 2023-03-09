@@ -8,7 +8,7 @@ export function FirstSection() {
       <div className="flex flex-col-reverse items-center mt-24 px-5 justify-between lg:gap-16 lg:mb-24 lg:mx-[100px] md:flex-row">
         <section className="flex flex-col justify-center items-center lg:items-start lg:max-w-xl">
           <div className="flex flex-col-reverse justify-center items-center lg:block mt-24 lg:mt-0">
-            <h1 className="font-black italic text-4xl text-center mt-6 lg:text-left lg:text-[68px] lg:leading-[64px]">
+            <h1 className="font-black italic text-4xl text-center mt-4 lg:text-left lg:text-[68px] lg:leading-[64px]">
               CONHEÇA A VINZE, E REVOLUCIONE SEUS PROJETOS
             </h1>
             <p className="text-[#959595] text-lg lg:text-base lg:mt-6">

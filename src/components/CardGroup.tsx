@@ -1,9 +1,17 @@
 import { Camera, Image as ImagePhosphor, FilmSlate } from 'phosphor-react'
 
-export function CardGroup() {
+export interface cardGroupProps {
+  classNameCardGroup: string
+}
+
+export function CardGroup({ classNameCardGroup }: cardGroupProps) {
+  // const [className, setClassName] = useState('hidden')
+
   return (
     <>
-      <div className="w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw] card-animation">
+      <div
+        className={`${classNameCardGroup} w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw]`}
+      >
         <Camera size={80} className="text-[#202020]" />
         <h3 className="text-[#CB2222] font-bold text-xl flex flex-col items-center">
           Invista em<span className="text-2xl">Qualidade</span>
@@ -15,7 +23,9 @@ export function CardGroup() {
           vídeos e fotografia.
         </p>
       </div>
-      <div className="w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw] card-animation">
+      <div
+        className={`${classNameCardGroup} w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw]`}
+      >
         <ImagePhosphor size={80} className="text-[#202020]" />
         <h3 className="text-[#CB2222] font-bold text-xl flex flex-col items-center">
           Renove o seu<span className="text-2xl">Visual</span>
@@ -26,7 +36,9 @@ export function CardGroup() {
           mercado.
         </p>
       </div>
-      <div className="w-[75vw] mb-28 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw] card-animation">
+      <div
+        className={`${classNameCardGroup} w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw]`}
+      >
         <FilmSlate size={80} className="text-[#202020]" />
         <h3 className="text-[#CB2222] font-bold text-xl flex flex-col items-center">
           Crie a sua<span className="text-2xl">Produção</span>
