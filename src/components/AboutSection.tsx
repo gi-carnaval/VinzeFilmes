@@ -3,13 +3,13 @@ import aboutImage from '../assets/perfil.png'
 import Image from 'next/image'
 
 interface aboutSectionProps {
-  classNameAboutImage: string
-  classNameAboutText: string
+  classNameForAnimationAboutImage: string
+  classNameForAnimationAboutText: string
 }
 
 export function AboutSection({
-  classNameAboutImage,
-  classNameAboutText,
+  classNameForAnimationAboutImage,
+  classNameForAnimationAboutText,
 }: aboutSectionProps) {
   // const [classNameAboutImage, setClassNameAboutImage] = useState('hidden')
   // const [classNameAboutText, setClassNameAboutText] = useState('hidden')
@@ -19,7 +19,7 @@ export function AboutSection({
       <Title title={'Sobre a Vinze'} />
       <div className="w-full mt-6 px-[15%] flex flex-col items-center justify-center overflow-hidden lg:mt-24 lg:flex-row">
         <section
-          className={`${classNameAboutImage} flex justify-center lg:justify-start`}
+          className={`${classNameForAnimationAboutImage} flex justify-center lg:justify-start`}
         >
           <Image
             src={aboutImage}
@@ -28,7 +28,7 @@ export function AboutSection({
           />
         </section>
         <section
-          className={`${classNameAboutText} max-w-xl text-base leading-5 lg:leading-8 lg:text-lg`}
+          className={`${classNameForAnimationAboutText} max-w-xl text-base leading-5 lg:leading-8 lg:text-lg`}
         >
           <p className="text-center mt-4">
             A Vinze Filmes é uma empresa referência no mercado audiovisual de

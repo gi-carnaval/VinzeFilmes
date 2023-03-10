@@ -4,7 +4,7 @@
 /* purgecss end ignore */
 @tailwind  utilities;
 
-.show-card {
+.animation-top-in {
    position: relative;
    top: -5em;
    opacity: 0;
@@ -21,7 +21,7 @@
   100% { top: 0; opacity: 1; }
 }
 
-.show-aboutImage {
+.animation-left-in {
   position: relative;
   left: -5em;
   opacity: 0;
@@ -38,7 +38,7 @@
  100% { left: 0; opacity: 1; }
 }
 
-.show-aboutText {
+.animation-right-in {
   position: relative;
   right: -5em;
   opacity: 0;

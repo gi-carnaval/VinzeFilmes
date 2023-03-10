@@ -3,8 +3,10 @@ import { ClientsSection, LogoImages } from '@/components/ClientsSection'
 import { FirstSection } from '@/components/FirstSection'
 import { JobsSection, VideoProps } from '@/components/JobsSections'
 import { Loading } from '@/components/Loading'
+import { NumbersSection } from '@/components/NumbersSection'
 import { ProposeSection } from '@/components/ProproseSection'
 import { createClient } from '@/services/prismicio'
+import { screenWidthCompare } from '@/utils/layoutChecker'
 import { GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
@@ -15,33 +17,62 @@ interface HomeProps {
 }
 
 export default function Home({ logos, videos }: HomeProps) {
-  const [classNameAboutImage, setClassNameAboutImage] = useState('hidden')
-  const [classNameAboutText, setClassNameAboutText] = useState('hidden')
-  const [classNameCardGroup, setClassNameCardGroup] = useState('hidden')
+  const [classNameForAboutImageAnimation, setClassNameForAboutImageAnimation] =
+    useState('hidden')
+  const [classNameForAboutTextAnimation, setClassNameForAboutTextAnimation] =
+    useState('hidden')
+  const [classNameForNumbersLeft, setClassNameForNumbersLeft] =
+    useState('hidden')
+  const [classNameForNumbersRight, setClassNameForNumbersRight] =
+    useState('hidden')
+  const [classNameForCardsAnimation, setClassNameForCardsAnimation] =
+    useState('hidden')
+  const [counterOn, setCounterOn] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
+    const screenWidth = window.innerWidth
     setTimeout(() => {
       setIsLoading(false)
     }, 1500)
 
     function handleScroll() {
-      if (window.innerWidth > 426) {
-        if (document.documentElement.scrollTop > 450) {
-          setClassNameCardGroup('show-card')
-        }
-        if (document.documentElement.scrollTop > 1050) {
-          setClassNameAboutImage('show-aboutImage')
-          setClassNameAboutText('show-aboutText')
-        }
+      console.log(document.documentElement.scrollTop)
+      if (screenWidthCompare(screenWidth, 426)) {
+        verifyIfNumbersSectionIsVisible(2300, 3150)
+        triggerAnimation(450, 1050, 2400)
+      } else {
+        verifyIfNumbersSectionIsVisible(3300, 4100)
+        triggerAnimation(299, 1799, 3300)
       }
-      if (window.innerWidth <= 426) {
-        if (document.documentElement.scrollTop > 299) {
-          setClassNameCardGroup('show-card')
-        }
-        if (document.documentElement.scrollTop > 1799) {
-          setClassNameAboutImage('show-aboutImage')
-          setClassNameAboutText('show-aboutText')
-        }
+    }
+
+    function triggerAnimation(
+      cardsHeight: number,
+      aboutHeight: number,
+      numbersHeight: number,
+    ) {
+      if (document.documentElement.scrollTop > cardsHeight) {
+        setClassNameForCardsAnimation('animation-top-in')
+      }
+      if (document.documentElement.scrollTop > aboutHeight) {
+        setClassNameForAboutImageAnimation('animation-left-in')
+        setClassNameForAboutTextAnimation('animation-right-in')
+      }
+      if (document.documentElement.scrollTop > numbersHeight) {
+        setClassNameForNumbersLeft('animation-left-in')
+        setClassNameForNumbersRight('animation-right-in')
+      }
+    }
+
+    function verifyIfNumbersSectionIsVisible(startsOn: number, endsOn: number) {
+      if (
+        document.documentElement.scrollTop < startsOn ||
+        document.documentElement.scrollTop > endsOn
+      ) {
+        setCounterOn(false)
+      } else {
+        setCounterOn(true)
       }
     }
 
@@ -62,12 +93,19 @@ export default function Home({ logos, videos }: HomeProps) {
       ) : (
         <>
           <FirstSection />
-          <ProposeSection classNameCardGroup={classNameCardGroup} />
+          <ProposeSection
+            classNameForCardsAnimation={classNameForCardsAnimation}
+          />
           <AboutSection
-            classNameAboutImage={classNameAboutImage}
-            classNameAboutText={classNameAboutText}
+            classNameForAnimationAboutImage={classNameForAboutImageAnimation}
+            classNameForAnimationAboutText={classNameForAboutTextAnimation}
           />
           <ClientsSection logoImages={logos} />
+          <NumbersSection
+            classNameAnimationLeftIn={classNameForNumbersLeft}
+            classNameAnimationRightIn={classNameForNumbersRight}
+            counterOn={counterOn}
+          />
           <JobsSection jobVideos={videos} />
         </>
       )}
