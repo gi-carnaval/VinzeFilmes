@@ -17,7 +17,7 @@ export function NumbersSection({
       <Title title="Números" />
       <div className="w-full mt-12 px-[10%] gap-10 flex flex-col items-center justify-center overflow-hidden lg:mt-24 lg:flex-row">
         <section
-          className={`${classNameAnimationLeftIn} flex flex-col items-center justify-center gap-5 lg:justify-start lg:items-baseline`}
+          className={`${classNameAnimationLeftIn} flex flex-col items-center justify-center gap-5 lg:flex-row lg:justify-start lg:items-baseline`}
         >
           <h3 className="text-5xl font-semibold lg:text-8xl">
             {counterOn && (
@@ -34,7 +34,7 @@ export function NumbersSection({
           <span className="text-lg font-semibold">Anos de atividades</span>
         </section>
         <section
-          className={`${classNameAnimationRightIn} flex flex-col items-center justify-center gap-5  lg:justify-start lg:items-baseline`}
+          className={`${classNameAnimationRightIn} flex flex-col items-center justify-center gap-5 lg:flex-row lg:justify-start lg:items-baseline`}
         >
           <h3 className="text-5xl font-semibold lg:text-8xl">
             {counterOn && (

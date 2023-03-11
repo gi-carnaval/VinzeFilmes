@@ -6,7 +6,6 @@ import { Loading } from '@/components/Loading'
 import { NumbersSection } from '@/components/NumbersSection'
 import { ProposeSection } from '@/components/ProproseSection'
 import { createClient } from '@/services/prismicio'
-import { screenWidthCompare } from '@/utils/layoutChecker'
 import { GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
@@ -25,35 +24,67 @@ export default function Home({ logos, videos }: HomeProps) {
     useState('hidden')
   const [classNameForNumbersRight, setClassNameForNumbersRight] =
     useState('hidden')
-  const [classNameForCardsAnimation, setClassNameForCardsAnimation] =
+
+  const [heightTriggerForFirstCard, setHeightTriggerForFirstCard] =
     useState('hidden')
+  const [heightTriggerForSecondCard, setHeightTriggerForSecondCard] =
+    useState('hidden')
+  const [heightTriggerForThirdCard, setHeightTriggerForThirdCard] =
+    useState('hidden')
+
   const [counterOn, setCounterOn] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const screenWidth = window.innerWidth
+    console.log(screenWidth)
+    const screenHeight = window.innerHeight
+    console.log(screenHeight)
     setTimeout(() => {
       setIsLoading(false)
     }, 1500)
 
     function handleScroll() {
       console.log(document.documentElement.scrollTop)
-      if (screenWidthCompare(screenWidth, 426)) {
-        verifyIfNumbersSectionIsVisible(2300, 3150)
-        triggerAnimation(450, 1050, 2400)
-      } else {
-        verifyIfNumbersSectionIsVisible(3300, 4100)
-        triggerAnimation(299, 1799, 3300)
+      if (screenWidth <= 320 && screenHeight <= 680) {
+        verifyIfNumbersSectionIsVisible(3400, 4300)
+        triggerAnimation(280, 800, 1230, 1820, 3380)
+      } else if (screenWidth <= 322 && screenHeight <= 684) {
+        verifyIfNumbersSectionIsVisible(3300, 4200)
+        triggerAnimation(280, 800, 1230, 1820, 3380)
+      } else if (screenWidth <= 390 && screenHeight <= 844) {
+        verifyIfNumbersSectionIsVisible(3300, 4200)
+        triggerAnimation(260, 710, 1120, 1880, 3300)
+      } else if (screenWidth <= 426 && screenHeight <= 680) {
+        verifyIfNumbersSectionIsVisible(3350, 4250)
+        triggerAnimation(250, 685, 1051, 1800, 3350)
+      } else if (screenWidth <= 428 && screenHeight <= 926) {
+        verifyIfNumbersSectionIsVisible(3230, 4250)
+        triggerAnimation(265, 690, 1070, 1750, 3230)
+      } else if (screenWidth <= 1440) {
+        verifyIfNumbersSectionIsVisible(2300, 3100)
+        triggerAnimation(265, 265, 265, 1050, 2300)
+      } else if (screenWidth <= 2560) {
+        verifyIfNumbersSectionIsVisible(2250, 3600)
+        triggerAnimation(265, 265, 265, 900, 2250)
       }
     }
 
     function triggerAnimation(
-      cardsHeight: number,
+      firstCardHeight: number,
+      secondCardHeight: number,
+      thirdCardHeight: number,
       aboutHeight: number,
       numbersHeight: number,
     ) {
-      if (document.documentElement.scrollTop > cardsHeight) {
-        setClassNameForCardsAnimation('animation-top-in')
+      if (document.documentElement.scrollTop > firstCardHeight) {
+        setHeightTriggerForFirstCard('animation-top-in')
+      }
+      if (document.documentElement.scrollTop > secondCardHeight) {
+        setHeightTriggerForSecondCard('animation-top-in')
+      }
+      if (document.documentElement.scrollTop > thirdCardHeight) {
+        setHeightTriggerForThirdCard('animation-top-in')
       }
       if (document.documentElement.scrollTop > aboutHeight) {
         setClassNameForAboutImageAnimation('animation-left-in')
@@ -94,7 +125,9 @@ export default function Home({ logos, videos }: HomeProps) {
         <>
           <FirstSection />
           <ProposeSection
-            classNameForCardsAnimation={classNameForCardsAnimation}
+            heightTriggerForFirstCard={heightTriggerForFirstCard}
+            heightTriggerForSecondCard={heightTriggerForSecondCard}
+            heightTriggerForThirdCard={heightTriggerForThirdCard}
           />
           <AboutSection
             classNameForAnimationAboutImage={classNameForAboutImageAnimation}

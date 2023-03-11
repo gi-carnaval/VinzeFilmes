@@ -11,9 +11,6 @@ export function AboutSection({
   classNameForAnimationAboutImage,
   classNameForAnimationAboutText,
 }: aboutSectionProps) {
-  // const [classNameAboutImage, setClassNameAboutImage] = useState('hidden')
-  // const [classNameAboutText, setClassNameAboutText] = useState('hidden')
-
   return (
     <div className="w-full lg:mt-24 flex flex-col justify-center items-center">
       <Title title={'Sobre a Vinze'} />
@@ -32,7 +29,7 @@ export function AboutSection({
         >
           <p className="text-center mt-4">
             A Vinze Filmes é uma empresa referência no mercado audiovisual de
-            Ourinhos e região. Desde 2016, nós estamos dando VIDA a IDEIA de
+            Ourinhos e região. Desde 2014, nós estamos dando VIDA a IDEIA de
             nossos clientes. Nossa missão é transformar ideias em um produto
             audiovisual de alta qualidade.
           </p>

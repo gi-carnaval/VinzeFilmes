@@ -1,16 +1,22 @@
 import { Camera, Image as ImagePhosphor, FilmSlate } from 'phosphor-react'
 
 export interface cardGroupProps {
-  classNameForCardsAnimation: string
+  heightTriggerForFirstCard: string
+  heightTriggerForSecondCard: string
+  heightTriggerForThirdCard: string
 }
 
-export function CardGroup({ classNameForCardsAnimation }: cardGroupProps) {
+export function CardGroup({
+  heightTriggerForFirstCard,
+  heightTriggerForSecondCard,
+  heightTriggerForThirdCard,
+}: cardGroupProps) {
   // const [className, setClassName] = useState('hidden')
 
   return (
     <>
       <div
-        className={`${classNameForCardsAnimation} w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw]`}
+        className={`${heightTriggerForFirstCard} w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw]`}
       >
         <Camera size={80} className="text-[#202020]" />
         <h3 className="text-[#CB2222] font-bold text-xl flex flex-col items-center">
@@ -24,7 +30,7 @@ export function CardGroup({ classNameForCardsAnimation }: cardGroupProps) {
         </p>
       </div>
       <div
-        className={`${classNameForCardsAnimation} w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw]`}
+        className={`${heightTriggerForSecondCard} w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw]`}
       >
         <ImagePhosphor size={80} className="text-[#202020]" />
         <h3 className="text-[#CB2222] font-bold text-xl flex flex-col items-center">
@@ -37,7 +43,7 @@ export function CardGroup({ classNameForCardsAnimation }: cardGroupProps) {
         </p>
       </div>
       <div
-        className={`${classNameForCardsAnimation} w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw]`}
+        className={`${heightTriggerForThirdCard} w-[75vw] mb-16 flex flex-col items-center rounded-2xl bg-zinc-300 p-5 shadow-zinc-600 shadow-xl lg:mb-0 lg:w-[25vw]`}
       >
         <FilmSlate size={80} className="text-[#202020]" />
         <h3 className="text-[#CB2222] font-bold text-xl flex flex-col items-center">
