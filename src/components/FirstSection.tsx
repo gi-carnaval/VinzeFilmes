@@ -9,7 +9,7 @@ export function FirstSection() {
         <section className="flex flex-col justify-center items-center lg:items-start lg:max-w-xl">
           <div className="flex flex-col-reverse justify-center items-center lg:block mt-24 lg:mt-0">
             <h1 className="font-black italic text-4xl text-center mt-4 lg:text-left lg:text-[68px] lg:leading-[64px]">
-              CONHEÇA A VINZE, E REVOLUCIONE SEUS PROJETOS
+              CONHEÇA A VINZE E REVOLUCIONE SEUS PROJETOS
             </h1>
             <p className="text-[#959595] text-lg lg:text-base lg:mt-6">
               Invista em <span className="font-bold">QUALIDADE</span>

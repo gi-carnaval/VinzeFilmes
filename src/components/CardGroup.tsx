@@ -23,10 +23,9 @@ export function CardGroup({
           Invista em<span className="text-2xl">Qualidade</span>
         </h3>
         <p className="text-[#202020] text-base text-center mt-5">
-          Invista em qualidade. Invista na Vinze Filmes, empresa que traz
-          conceitos inovadores para toda a produção de conteúdo. Somos
-          especialistas na produção de roteiro, ilustração, animação, edição de
-          vídeos e fotografia.
+          Invista na Vinze Filmes, empresa que traz conceitos inovadores para
+          toda a produção de conteúdo. Somos especialistas na produção de
+          roteiro, ilustração, animação, edição de vídeos e fotografia.
         </p>
       </div>
       <div
