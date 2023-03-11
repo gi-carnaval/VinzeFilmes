@@ -37,30 +37,35 @@ export default function Home({ logos, videos }: HomeProps) {
 
   useEffect(() => {
     const screenWidth = window.innerWidth
-    console.log(screenWidth)
+    // console.log(screenWidth)
     const screenHeight = window.innerHeight
-    console.log(screenHeight)
+    // console.log(screenHeight)
     setTimeout(() => {
       setIsLoading(false)
     }, 1500)
 
     function handleScroll() {
-      console.log(document.documentElement.scrollTop)
+      // console.log(document.documentElement.scrollTop)
       if (screenWidth <= 320 && screenHeight <= 680) {
+        // console.log('320 x 680')
         verifyIfNumbersSectionIsVisible(3400, 4300)
         triggerAnimation(280, 800, 1230, 1820, 3380)
       } else if (screenWidth <= 322 && screenHeight <= 684) {
+        // console.log('322 x 684')
         verifyIfNumbersSectionIsVisible(3300, 4200)
         triggerAnimation(280, 800, 1230, 1820, 3380)
       } else if (screenWidth <= 390 && screenHeight <= 844) {
-        verifyIfNumbersSectionIsVisible(3300, 4200)
-        triggerAnimation(260, 710, 1120, 1880, 3300)
+        // console.log('390 x 844')
+        verifyIfNumbersSectionIsVisible(3500, 4460)
+        triggerAnimation(315, 710, 1120, 2000, 3500)
       } else if (screenWidth <= 426 && screenHeight <= 680) {
+        // console.log('426 x 680')
         verifyIfNumbersSectionIsVisible(3350, 4250)
-        triggerAnimation(250, 685, 1051, 1800, 3350)
+        triggerAnimation(250, 685, 1051, 1960, 3350)
       } else if (screenWidth <= 428 && screenHeight <= 926) {
-        verifyIfNumbersSectionIsVisible(3230, 4250)
-        triggerAnimation(265, 690, 1070, 1750, 3230)
+        // console.log('428 x 926')
+        verifyIfNumbersSectionIsVisible(3440, 4460)
+        triggerAnimation(320, 690, 1070, 1750, 3440)
       } else if (screenWidth <= 1440) {
         verifyIfNumbersSectionIsVisible(2300, 3100)
         triggerAnimation(265, 265, 265, 1050, 2300)

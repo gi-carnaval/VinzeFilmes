@@ -12,7 +12,7 @@ export function AboutSection({
   classNameForAnimationAboutText,
 }: aboutSectionProps) {
   return (
-    <div className="w-full lg:mt-24 flex flex-col justify-center items-center">
+    <div className="w-full flex flex-col justify-center items-center">
       <Title title={'Sobre a Vinze'} />
       <div className="w-full mt-6 px-[15%] flex flex-col items-center justify-center overflow-hidden lg:mt-24 lg:flex-row">
         <section
