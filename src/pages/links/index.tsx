@@ -9,6 +9,13 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { Loading } from '@/components/Loading'
+import { Montserrat } from '@next/font/google'
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  style: 'italic',
+  weight: ['900'],
+})
 
 export default function Links() {
   const [isLoading, setIsLoading] = useState(true)
@@ -32,10 +39,12 @@ export default function Links() {
             <div className="flex flex-col-reverse items-center px-5 justify-center lg:gap-16 lg:mb-1 lg:mx-[100px] md:flex-row">
               <section className="flex flex-col justify-center items-center lg:items-start lg:max-w-xl">
                 <div className="flex flex-col-reverse justify-center items-center lg:block mt-12 lg:mt-0">
-                  <h1 className="font-black italic text-2xl text-center mt-4 lg:text-left lg:text-[68px] lg:leading-[64px]">
+                  <h1
+                    className={`${montserrat.className} text-2xl text-center mt-4 lg:text-left lg:text-[68px] lg:leading-[64px]`}
+                  >
                     CONHEÇA A VINZE E REVOLUCIONE SEUS PROJETOS
                   </h1>
-                  <p className="text-[#959595] text-lg lg:text-base lg:mt-6">
+                  <p className="text-[#959595] text-xl lg:mt-6">
                     Como posso te ajudar?
                   </p>
                 </div>
