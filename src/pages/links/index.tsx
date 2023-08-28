@@ -1,7 +1,7 @@
 import LogoVinze from '../../assets/logoVinze.png'
 import buttonMeuSite from '../../assets/buttonMeuSite.png'
 import buttonOrcamento from '../../assets/buttonOrcamento.png'
-import buttonPortifolio from '../../assets/buttonPortifolio.png'
+import buttonPortifolio from '../../assets/portifolioButton.png'
 import buttonVinzeFilmes from '../../assets/buttonVinzeFilmes.png'
 
 import Image from 'next/image'
