@@ -22,6 +22,7 @@ export function Footer() {
           <Link
             href="https://linkedin.com/in/giovani-carnaval/"
             className="font-bold"
+            aria-label="Conheça o desenvolvedor deste site."
           >
             Giovani Carnaval
           </Link>
@@ -35,6 +36,7 @@ export function Footer() {
             target="_blank"
             href="https://api.whatsapp.com/send?phone=5514997623484&text=Ol%C3%A1%20Vinze%2C%20queria%20iniciar%20um%20projeto%20com%20voc%C3%AA%20%F0%9F%98%8E"
             rel="noreferrer"
+            aria-label="Entre em contato e solicite um orçamento"
           >
             <WhatsappLogo
               size={30}
@@ -45,6 +47,7 @@ export function Footer() {
             target="_blank"
             href="https://www.instagram.com/vinzefilmes/"
             rel="noreferrer"
+            aria-label="Siga de perto cada produção sendo criada pelo nosso intagram"
           >
             <InstagramLogo
               size={30}
@@ -55,6 +58,7 @@ export function Footer() {
             target="_blank"
             href="https://www.youtube.com/@vinzefilmes"
             rel="noreferrer"
+            aria-label="Acesso todos os nossos trabalhos já produzidos"
           >
             <YoutubeLogo
               size={30}
@@ -63,6 +67,7 @@ export function Footer() {
           </Link>
           <Link
             target="_blank"
+            aria-label="Acesse nosso facebook e fica ligado em cada produção nova"
             href="https://www.facebook.com/viniciusgenerich"
           >
             <FacebookLogo

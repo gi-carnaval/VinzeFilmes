@@ -56,21 +56,30 @@ export default function Links() {
                       className="hover:scale-105 transition-transform"
                     />
                   </Link>
-                  <Link href="https://api.whatsapp.com/send?phone=5514997623484&text=Ol%C3%A1%20Vinze%2C%20queria%20iniciar%20um%20projeto%20com%20voc%C3%AA%20%F0%9F%98%8E">
+                  <Link
+                    aria-label="Entre em contato e solicite um orçamento"
+                    href="https://api.whatsapp.com/send?phone=5514997623484&text=Ol%C3%A1%20Vinze%2C%20queria%20iniciar%20um%20projeto%20com%20voc%C3%AA%20%F0%9F%98%8E"
+                  >
                     <Image
                       src={buttonOrcamento}
                       alt="Botão Orçamento"
                       className="hover:scale-105 transition-transform"
                     />
                   </Link>
-                  <Link href="https://www.youtube.com/@vinzefilmes">
+                  <Link
+                    aria-label="Acesso todos os nossos trabalhos já produzidos"
+                    href="https://www.youtube.com/@vinzefilmes"
+                  >
                     <Image
                       src={buttonPortifolio}
                       alt="Botão Portifólio"
                       className="hover:scale-105 transition-transform"
                     />
                   </Link>
-                  <Link href="https://www.instagram.com/vinzefilmes/">
+                  <Link
+                    aria-label="Siga de perto cada produção sendo criada pelo nosso intagram"
+                    href="https://www.instagram.com/vinzefilmes/"
+                  >
                     <Image
                       src={buttonVinzeFilmes}
                       alt="Botão Instagram"
