@@ -1,23 +1,35 @@
+import { useState } from 'react'
 import { Title } from './Title'
 import CountUp from 'react-countup'
+// import ScrollTrigger from 'react-scroll-trigger'
+import useIntersection from '@/Hooks/useIntersection'
 
-interface NumbersSectionProps {
-  counterOn: boolean
-  classNameAnimationRightIn: string
-  classNameAnimationLeftIn: string
-}
+export function NumbersSection() {
+  const [counterOn, setCounterOn] = useState(false)
 
-export function NumbersSection({
-  counterOn,
-  classNameAnimationRightIn,
-  classNameAnimationLeftIn,
-}: NumbersSectionProps) {
+  const [targetRef] = useIntersection(
+    {
+      root: null,
+      rootMargin: '100px',
+      threshold: 0.5,
+    },
+    () => {
+      setCounterOn(true)
+    },
+    () => {
+      setCounterOn(false)
+    },
+  )
+
   return (
-    <div className="mt-36 mb-36 w-full flex flex-col justify-center items-center">
+    <div
+      ref={targetRef}
+      className="mt-36 mb-36 w-full flex flex-col justify-center items-center"
+    >
       <Title title="Números" />
       <div className="w-full mt-12 px-[10%] gap-10 flex flex-col items-center justify-center overflow-hidden lg:mt-24 lg:flex-row">
         <section
-          className={`${classNameAnimationLeftIn} flex flex-col items-center justify-center gap-5 lg:flex-row lg:justify-start lg:items-baseline`}
+          className={`flex flex-col items-center justify-center gap-5 lg:flex-row lg:justify-start lg:items-baseline`}
         >
           <h3 className="text-5xl font-semibold lg:text-8xl">
             {counterOn && (
@@ -34,7 +46,7 @@ export function NumbersSection({
           <span className="text-lg font-semibold">Anos de atividades</span>
         </section>
         <section
-          className={`${classNameAnimationRightIn} flex flex-col items-center justify-center gap-5 lg:flex-row lg:justify-start lg:items-baseline`}
+          className={`flex flex-col items-center justify-center gap-5 lg:flex-row lg:justify-start lg:items-baseline`}
         >
           <h3 className="text-5xl font-semibold lg:text-8xl">
             {counterOn && (
@@ -52,5 +64,6 @@ export function NumbersSection({
         </section>
       </div>
     </div>
+    // </ScrollTrigger>
   )
 }
