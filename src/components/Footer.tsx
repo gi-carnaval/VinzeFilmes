@@ -22,7 +22,7 @@ export function Footer() {
           <Link
             href="https://linkedin.com/in/giovani-carnaval/"
             className="font-bold"
-            aria-label="Conheça o desenvolvedor deste site."
+            aria-label="Giovani Carnaval."
           >
             Giovani Carnaval
           </Link>
