@@ -1,4 +1,4 @@
-import { CardGroup, cardGroupProps } from './CardGroup'
+import { CardGroup } from './CardGroup'
 
 import { Title } from './Title'
 
