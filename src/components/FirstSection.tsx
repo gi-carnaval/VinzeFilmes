@@ -39,6 +39,7 @@ export function FirstSection() {
             src={LogoVinze}
             alt="Logo Vinze Filmes"
             className="w-6/6 logoVinze"
+            width={750}
           />
         </section>
       </div>

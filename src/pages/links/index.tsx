@@ -54,6 +54,7 @@ export default function Links() {
                       src={buttonMeuSite}
                       alt="Botão Meu Site"
                       className="hover:scale-105 transition-transform"
+                      height={100}
                     />
                   </Link>
                   <Link
@@ -64,6 +65,7 @@ export default function Links() {
                       src={buttonOrcamento}
                       alt="Botão Orçamento"
                       className="hover:scale-105 transition-transform"
+                      height={100}
                     />
                   </Link>
                   <Link
@@ -74,6 +76,7 @@ export default function Links() {
                       src={buttonPortifolio}
                       alt="Botão Portifólio"
                       className="hover:scale-105 transition-transform"
+                      height={100}
                     />
                   </Link>
                   <Link
@@ -84,6 +87,7 @@ export default function Links() {
                       src={buttonVinzeFilmes}
                       alt="Botão Instagram"
                       className="hover:scale-105 transition-transform"
+                      height={100}
                     />
                   </Link>
                 </div>

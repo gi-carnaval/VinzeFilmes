@@ -14,6 +14,7 @@ export function AboutSection() {
               src={aboutImage}
               alt="Logo Vinze Filmes"
               className="w-11/12 lg:w-4/6"
+              width={600}
             />
           </section>
         </Slide>
