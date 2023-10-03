@@ -32,7 +32,7 @@ export default function Links() {
         <Loading />
       ) : (
         <>
-          <div className="h-screen px-5 py-6 flex justify-center items-center bg-[url('../assets/CAPA-SITE-MOBILE.png')] lg:w-full lg:mx-0 md:bg-[url('../assets/CAPA-DESKTOP.png')] bg-no-repeat bg-cover">
+          <div className="h-screen px-5 py-6 flex justify-center items-center bg-[url('../assets/CAPA-SITE-MOBILE.webp')] lg:w-full lg:mx-0 md:bg-[url('../assets/CAPA-DESKTOP.webp')] bg-no-repeat bg-cover">
             <Head>
               <title>Vinze Filmes Links</title>
             </Head>

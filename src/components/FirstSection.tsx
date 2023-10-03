@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 export function FirstSection() {
   return (
-    <div className="h-screen px-5 flex justify-center items-center bg-[url('../assets/CAPA-SITE-MOBILE.png')] lg:w-full lg:mx-0 md:bg-[url('../assets/CAPA-DESKTOP.png')] bg-no-repeat bg-cover">
+    <div className="h-screen px-5 flex justify-center items-center bg-[url('../assets/CAPA-SITE-MOBILE.webp')] lg:w-full lg:mx-0 md:bg-[url('../assets/CAPA-DESKTOP.webp')] bg-no-repeat bg-cover">
       <div className="flex flex-col-reverse items-center mt-24 px-5 justify-between lg:gap-16 lg:mb-24 lg:mx-[100px] md:flex-row">
         <section className="flex flex-col justify-center items-center lg:items-start lg:max-w-xl">
           <div className="flex flex-col-reverse justify-center items-center lg:block mt-24 lg:mt-0">
