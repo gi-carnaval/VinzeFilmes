@@ -1,5 +1,5 @@
 import { Title } from './Title'
-import aboutImage from '../assets/perfil.png'
+import aboutImage from '../assets/perfil.webp'
 import Image from 'next/image'
 import { Slide } from 'react-awesome-reveal'
 
@@ -12,7 +12,7 @@ export function AboutSection() {
           <section className={`flex justify-center lg:justify-start`}>
             <Image
               src={aboutImage}
-              alt="Logo Vinze Filmes"
+              alt="Vinze Filmes"
               className="w-11/12 lg:w-4/6"
               width={600}
             />

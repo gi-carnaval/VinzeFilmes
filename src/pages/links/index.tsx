@@ -1,8 +1,8 @@
-import LogoVinze from '../../assets/logoVinze.png'
-import buttonMeuSite from '../../assets/buttonMeuSite.png'
-import buttonOrcamento from '../../assets/buttonOrcamento.png'
-import buttonPortifolio from '../../assets/portifolioButton.png'
-import buttonVinzeFilmes from '../../assets/buttonVinzeFilmes.png'
+import LogoVinze from '../../assets/logoVinze.webp'
+import buttonMeuSite from '../../assets/buttonMeuSite.webp'
+import buttonOrcamento from '../../assets/buttonOrcamento.webp'
+import buttonPortifolio from '../../assets/portifolioButton.webp'
+import buttonVinzeFilmes from '../../assets/buttonVinzeFilmes.webp'
 
 import Image from 'next/image'
 import Link from 'next/link'

@@ -18,9 +18,6 @@ module.exports = {
       fontFamily: {
         sans: ['montserrat', 'sans-serif'],
       },
-      backgroundImage: {
-        principalBG: "url('/ser/assets/bg.png)",
-      },
     },
   },
   plugins: [],

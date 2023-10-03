@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import LogoVinze from '../assets/logoVinze.png'
+import LogoVinze from '../assets/logoVinze.webp'
 import { Button } from './Button'
 import { Montserrat } from '@next/font/google'
 
@@ -39,7 +39,7 @@ export function FirstSection() {
             src={LogoVinze}
             alt="Logo Vinze Filmes"
             className="w-6/6 logoVinze"
-            width={750}
+            height={600}
           />
         </section>
       </div>

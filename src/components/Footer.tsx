@@ -1,4 +1,4 @@
-import LogoVinze from '../assets/logoVinze.png'
+import LogoVinze from '../assets/logoVinze.webp'
 import {
   WhatsappLogo,
   InstagramLogo,
