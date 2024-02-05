@@ -26,23 +26,35 @@ export default function Home({ logos, videos }: HomeProps) {
 
   return (
     <>
+      <Head>
+        <title>Vinze Filmes</title>
+        <meta
+          property="og:image"
+          content="https://images.prismic.io/vinzefilmes/e1e4c231-9cc1-4e7d-ab6a-270806e0d2ab_ogImage.png?auto=compress,format"
+        />
+        <meta property="og:image:type" content="png" />
+        <meta property="og:image:width" content="256" />
+        <meta property="og:image:height" content="256" />
+        <meta property="og:title" content="Vinze Filmes" />
+        <meta
+          name="description"
+          content="Conheça a Vinze Filmes e nossos projetos, e venha realizar sua produção conosco. "
+        />
+        <meta
+          name="twitter:image"
+          content="https://images.prismic.io/vinzefilmes/e1e4c231-9cc1-4e7d-ab6a-270806e0d2ab_ogImage.png?auto=compress,format"
+        />
+        <meta name="twitter:title" content="Vinze Filmes" />
+        <meta
+          name="twitter:description"
+          content="Conheça a Vinze Filmes e nossos projetos, e venha realizar sua produção conosco."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       {isLoading ? (
         <Loading />
       ) : (
         <>
-          <Head>
-            <title>Vinze Filmes</title>
-            <meta
-              property="og:image"
-              content="https://images.prismic.io/vinzefilmes/e1e4c231-9cc1-4e7d-ab6a-270806e0d2ab_ogImage.png?auto=compress,format"
-            />
-            <meta property="og:title" content="Vinze Filmes" />
-            <meta
-              name="description"
-              content="Conheça a Vinze Filmes e nossos projetos, e venha realizar sua produção conosco. "
-            ></meta>
-          </Head>
-
           <FirstSection />
           <ProposeSection />
           <AboutSection />
