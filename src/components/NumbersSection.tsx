@@ -36,7 +36,7 @@ export function NumbersSection() {
               <CountUp
                 start={0}
                 delay={0.25}
-                end={9}
+                end={10}
                 duration={1}
                 prefix="+"
                 useEasing={true}
