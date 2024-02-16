@@ -26,9 +26,9 @@ export function ClientsSection({ logoImages }: ClientsProps) {
                 key={index}
                 src={image.data.logo.url}
                 alt={`${image.data.nome_do_cliente}`}
-                width={180}
-                height={80}
-                className="lg:h-[80px] lg:w-[180px] w-[80%] md:w-[45%]"
+                width={1000}
+                height={500}
+                className="lg:h-[80px] lg:w-[180px] w-[65%] md:w-[45%]"
               />
             )
           })}
