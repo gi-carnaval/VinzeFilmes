@@ -86,7 +86,6 @@ const settings = {
 }
 
 export function ClientsSection({ logoImages }: ClientsProps) {
-  console.log(logoImages)
   const BREAKPONIT = 768
 
   const [isMobile, setIsMobile] = useState<boolean>(
