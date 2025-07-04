@@ -59,7 +59,7 @@ export default function Links() {
                   </Link>
                   <Link
                     aria-label="Entre em contato e solicite um orçamento"
-                    href="https://api.whatsapp.com/send?phone=5514996497546&text=Vinze%2C%20quero%20come%C3%A7ar%20um%20projeto%20com%C2%A0voc%C3%AAs"
+                    href="https://api.whatsapp.com/send?phone=5514996497546&text=Vinze%2C%20quero%20come%C3%A7ar%20um%20projeto%20com%C2%A0voc%C3%AAs!"
                   >
                     <Image
                       src={buttonOrcamento}

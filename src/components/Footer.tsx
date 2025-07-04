@@ -34,7 +34,7 @@ export function Footer() {
         <span className="flex justify-center items-center gap-5 mb-7 lg:w-96 lg:justify-end lg:mb-0">
           <Link
             target="_blank"
-            href="https://api.whatsapp.com/send?phone=5514996497546&text=Vinze%2C%20quero%20come%C3%A7ar%20um%20projeto%20com%C2%A0voc%C3%AAs"
+            href="https://api.whatsapp.com/send?phone=5514996497546&text=Vinze%2C%20quero%20come%C3%A7ar%20um%20projeto%20com%C2%A0voc%C3%AAs!"
             rel="noreferrer"
             aria-label="Entre em contato e solicite um orçamento"
           >

@@ -30,7 +30,7 @@ export function FirstSection() {
           <Button
             className="mt-6 lg:mt-24"
             textButton="Entre em contato"
-            link="https://api.whatsapp.com/send?phone=5514996497546&text=Vinze%2C%20quero%20come%C3%A7ar%20um%20projeto%20com%C2%A0voc%C3%AAs"
+            link="https://api.whatsapp.com/send?phone=5514996497546&text=Vinze%2C%20quero%20come%C3%A7ar%20um%20projeto%20com%C2%A0voc%C3%AAs!"
             hasIcon
           />
         </section>
